@@ -1,0 +1,290 @@
+:root {
+    --primary: steelblue;
+    --secondary: white;
+    --text: #333;
+    --bg: #f4f4f4;
+    --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px 40px;
+
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 14px 28px;
+    transition: .3s;
+}
+
+nav a:hover {
+    background: #e6f2fa;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.hero > img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 3rem;
+    font-weight: bold;
+
+    color: white;
+    text-shadow: 2px 2px 10px black;
+}
+
+.hero article {
+    position: absolute;
+
+    left: 50%;
+    bottom: 40px;
+
+    transform: translateX(-50%);
+
+    width: 85%;
+
+    background: rgba(255,255,255,0.92);
+
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.hero article img {
+    width: 140px;
+    float: right;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.hero article p {
+    font-size: 1.1rem;
+}
+
+/* =========================
+   HISTORY
+========================= */
+
+.history {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+
+    background: white;
+
+    padding: 40px;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px var(--shadow);
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.history-content p {
+    text-align: justify;
+}
+
+/* =========================
+   ADVENTURE
+========================= */
+
+.adventure {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+
+    background: white;
+    padding: 40px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px var(--shadow);
+
+    text-align: center;
+}
+
+.adventure h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.gallery figure {
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+
+    padding: 25px 40px;
+
+    background-color: var(--primary);
+    color: white;
+
+    border-radius: 10px;
+}
+
+.sociallinks {
+    display: flex;
+    gap: 15px;
+}
+
+.sociallinks a {
+    text-decoration: none;
+}
+
+.sociallinks img {
+    width: 40px;
+    height: 40px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero article {
+        position: static;
+        transform: none;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

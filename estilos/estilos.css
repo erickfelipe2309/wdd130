@@ -1,70 +1,58 @@
+:root {
+    --primary: steelblue;
+    --bg: #f4f4f4;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+}
+
+/* NAV FLEX (SEMANA 04) */
 nav {
-    background-color: steelblue;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: var(--primary);
     padding: 10px;
 }
 
 nav a {
     color: white;
-    display: inline-block;
-    padding: 10px;
     text-decoration: none;
 }
 
-h1 {
-    color: steelblue;
-}
-
-main img {
-    width: 150px;
-    height: auto;
-
-    border: 1px solid black;
-
-    padding: 2px;
-
-    box-shadow: 0 0 30px gray;
-}
-
-p {
-    padding: 0;
-}
-
+/* MAIN */
 main {
-    max-width: 840px;
-}
-
-aside {
-
-    width: 20rem;
-
-    margin: 1rem;
-
-    border: 1px solid rgb(0 0 0 / 20%);
-
+    max-width: 900px;
+    margin: 0 auto;
     padding: 1rem;
 
-    background-color: #eeeeee;
-
-    color: #333;
-
-    text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-aside img {
-
+/* IMAGEM */
+main img {
     width: 200px;
-
-    height: auto;
-
+    border: 1px solid black;
+    padding: 3px;
+    box-shadow: 0 0 20px gray;
 }
 
-footer {
-
-    margin-top: 15px;
-
-    border-top: 1px solid #000;
-
+/* ASIDE */
+aside {
+    background: #eee;
+    padding: 1rem;
     text-align: center;
+    border: 1px solid #ccc;
+}
 
+/* FOOTER */
+footer {
+    text-align: center;
+    border-top: 1px solid #000;
+    padding: 10px;
 }
